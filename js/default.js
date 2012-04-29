@@ -149,9 +149,9 @@ $(function() {
 
     var graph_html = '<div id="graph" class="pachube-graph"'+
     ' pachube-resource="' + 
-          '/' + values.id + '/datastreams/' + values.stream_id +  
+          'feeds/' + values.id + '/datastreams/' + values.stream_id +  
             ' ' + 
-          '/' + values.id + '/datastreams/' + values.stream_id2 + 
+          'feeds/' + values.id + '/datastreams/' + values.stream_id2 + 
         '"' +
     ' pachube-key="' + values.key + 
     '" pachube-options="' + optionString+ '" style="width:' + values.width +';height:'+ values.height + ';background:' + values.background +';">'
