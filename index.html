@@ -54,10 +54,21 @@
           </div>
           <div class="row">
             <div class='label span-4'> 
-              <label for="stream_id">Datastream ID:</label> 
+              <label for="stream_id">Datastream ID 1:</label> 
             </div> 
             <div class='input span-4'> 
               <input name='stream_id' placeholder='1' type='text' id="stream_id"/>
+            </div> 
+            <div class='notes span-4 last'> 
+              ← This is the datastream to graph.  It must contain numeric data.
+            </div> 
+          </div>
+          <div class="row">
+            <div class='label span-4'> 
+              <label for="stream_id2">Datastream ID 2:</label> 
+            </div> 
+            <div class='input span-4'> 
+              <input name='stream_id2' placeholder='2' type='text' id="stream_id2"/>
             </div> 
             <div class='notes span-4 last'> 
               ← This is the datastream to graph.  It must contain numeric data.
@@ -84,7 +95,7 @@
               <label for="rolling">Rolling:</label> 
             </div> 
             <div class='input span-4'> 
-              <input name='rolling' type='checkbox' id="rolling" /> 
+              <input name='rolling' type='checkbox' id="rolling" checked/> 
             </div> 
             <div class='notes span-4 last'> 
               ← Should this graph finish "now"?  If selected the right-edge of this graph will be the time when it was loaded.
@@ -95,7 +106,7 @@
               <label for="update">Auto-Update:</label> 
             </div> 
             <div class='input span-4'> 
-              <input name='update' type='checkbox' id="update" /> 
+              <input name='update' type='checkbox' id="update" checked/> 
             </div> 
             <div class='notes span-4 last'> 
               ← Should this graph automatically update as new data is received?
@@ -208,6 +219,50 @@
             </div> 
             <div class='notes span-4 last'> 
               ← What colour should the text on the graph be?
+            </div> 
+          </div>
+          <div class="row">
+            <div class='label span-4'> 
+              <label for="hide-lines">hide lines:</label> 
+            </div> 
+            <div class='input span-4'> 
+              <input name='hide-lines' type='checkbox' id="hide-lines"/> 
+            </div> 
+            <div class='notes span-4 last'> 
+              ← Hide lines.
+            </div> 
+          </div>
+          <div class="row">
+            <div class='label span-4'> 
+              <label for="hide-points">hide points:</label> 
+            </div> 
+            <div class='input span-4'> 
+              <input name='hide-points' type='checkbox' id="hide-points"/> 
+            </div> 
+            <div class='notes span-4 last'> 
+              ← Hide points.
+            </div> 
+          </div>
+          <div class="row">
+            <div class='label span-4'> 
+              <label for="legend">legend:</label> 
+            </div> 
+            <div class='input span-4'> 
+              <input name='legend' type='checkbox' id="legend"/> 
+            </div> 
+            <div class='notes span-4 last'> 
+              ← Show legend.
+            </div> 
+          </div>
+          <div class="row">
+            <div class='label span-4'> 
+              <label for="yAxisMinTickSize">yAxisMinTickSize:</label> 
+            </div> 
+            <div class='input span-4'> 
+              <input name='yAxisMinTickSize' type='text' id="yAxisMinTickSize"/> 
+            </div> 
+            <div class='notes span-4 last'> 
+              ←  You can specify that you just don't want ticks at a size less than a specific tick size with "minTickSize".
             </div> 
           </div>
         </fieldset> 

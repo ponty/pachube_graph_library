@@ -15,7 +15,11 @@ var urlParams = {};
 
 $(function() {
   var apps_url = 'http://beta.apps.pachube.com'
-  var script_url = 'http://beta.apps.pachube.com/embeddable_graphs';
+
+  // use our version of the lib instead of the global version
+  //  var script_url = 'http://beta.apps.pachube.com/embeddable_graphs';
+  var script_url = '.';
+  
   var token = '';
   var data = {system: {}, user: {}};
 
@@ -98,6 +102,7 @@ $(function() {
     // Set some defaults
     values.id = values.id || "504";
     values.stream_id = values.stream_id || "1";
+    values.stream_id2 = values.stream_id2 || "2";
     values.key = values.key || '1iObDqRLQTi6Z3L-Gf7rKBJfSfSvrwFsmE83KrpYtCY';
     values.width = values.width || '420px';
     values.height = values.height || '240px';
@@ -131,6 +136,10 @@ $(function() {
                   , "border-color":      values['border-color'] || "#9D9D9D"
 
                   , "text-color":        values['text-color'] || "#555555"
+                  , "hide-lines":  values['hide-lines'] == 'on'
+                  , "hide-points":  values['hide-points'] == 'on'
+                  , "legend":  values['legend'] == 'on'
+                  , "yAxisMinTickSize":  values['yAxisMinTickSize']
                   };
 
     var optionString = ""
@@ -140,7 +149,14 @@ $(function() {
       }
     }
 
-    var graph_html = '<div id="graph" class="pachube-graph" pachube-resource="feeds/' + values.id + '/datastreams/' + values.stream_id + '" pachube-key="' + values.key + '" pachube-options="' + optionString+ '" style="width:' + values.width +';height:'+ values.height + ';background:' + values.background +';">'
+    var graph_html = '<div id="graph" class="pachube-graph"'+
+    ' pachube-resource="' + 
+          'feeds/' + values.id + '/datastreams/' + values.stream_id +  
+            ' ' + 
+          'feeds/' + values.id + '/datastreams/' + values.stream_id2 + 
+        '"' +
+    ' pachube-key="' + values.key + 
+    '" pachube-options="' + optionString+ '" style="width:' + values.width +';height:'+ values.height + ';background:' + values.background +';">'
     + 'Graph: Feed ' + values.id + ', Datastream ' + values.stream_id
     + '</div>';
 
