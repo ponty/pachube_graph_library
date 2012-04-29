@@ -135,6 +135,8 @@ $(function() {
                   , "border-color":      values['border-color'] || "#9D9D9D"
 
                   , "text-color":        values['text-color'] || "#555555"
+                  , "hide-lines":  values['hide-lines'] == 'on'
+                  , "hide-points":  values['hide-points'] == 'on'
                   };
 
     var optionString = ""
