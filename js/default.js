@@ -15,7 +15,11 @@ var urlParams = {};
 
 $(function() {
   var apps_url = 'http://beta.apps.pachube.com'
-  var script_url = 'http://beta.apps.pachube.com/embeddable_graphs';
+
+  // use our version of the lib instead of the global version
+  //  var script_url = 'http://beta.apps.pachube.com/embeddable_graphs';
+  var script_url = '.';
+  
   var token = '';
   var data = {system: {}, user: {}};
 
