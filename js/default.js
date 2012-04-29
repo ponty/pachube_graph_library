@@ -139,6 +139,7 @@ $(function() {
                   , "hide-lines":  values['hide-lines'] == 'on'
                   , "hide-points":  values['hide-points'] == 'on'
                   , "legend":  values['legend'] == 'on'
+                  , "yAxisMinTickSize":  values['yAxisMinTickSize']
                   };
 
     var optionString = ""
