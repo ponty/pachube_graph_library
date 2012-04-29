@@ -138,6 +138,7 @@ $(function() {
                   , "text-color":        values['text-color'] || "#555555"
                   , "hide-lines":  values['hide-lines'] == 'on'
                   , "hide-points":  values['hide-points'] == 'on'
+                  , "legend":  values['legend'] == 'on'
                   };
 
     var optionString = ""
