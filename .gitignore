@@ -4,3 +4,5 @@ instrumented/
 # ignore all hidden files except .gitignore
 .*
 !.gitignore
+
+!.nojekyll
