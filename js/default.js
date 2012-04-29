@@ -102,6 +102,7 @@ $(function() {
     // Set some defaults
     values.id = values.id || "504";
     values.stream_id = values.stream_id || "1";
+    values.stream_id2 = values.stream_id2 || "2";
     values.key = values.key || '1iObDqRLQTi6Z3L-Gf7rKBJfSfSvrwFsmE83KrpYtCY';
     values.width = values.width || '420px';
     values.height = values.height || '240px';
@@ -146,7 +147,14 @@ $(function() {
       }
     }
 
-    var graph_html = '<div id="graph" class="pachube-graph" pachube-resource="/' + values.id + '/datastreams/' + values.stream_id + '" pachube-key="' + values.key + '" pachube-options="' + optionString+ '" style="width:' + values.width +';height:'+ values.height + ';background:' + values.background +';">'
+    var graph_html = '<div id="graph" class="pachube-graph"'+
+    ' pachube-resource="' + 
+          '/' + values.id + '/datastreams/' + values.stream_id +  
+            ' ' + 
+          '/' + values.id + '/datastreams/' + values.stream_id2 + 
+        '"' +
+    ' pachube-key="' + values.key + 
+    '" pachube-options="' + optionString+ '" style="width:' + values.width +';height:'+ values.height + ';background:' + values.background +';">'
     + 'Graph: Feed ' + values.id + ', Datastream ' + values.stream_id
     + '</div>';
 
