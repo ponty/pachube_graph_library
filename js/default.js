@@ -18,7 +18,9 @@ $(function() {
 
   // use our version of the lib instead of the global version
   //  var script_url = 'http://beta.apps.pachube.com/embeddable_graphs';
-  var script_url = '.';
+  //  var script_url = '.'; // for local usage
+  var script_url = 'http://ponty.github.com/pachube_graph_library';
+
   
   var token = '';
   var data = {system: {}, user: {}};
@@ -126,7 +128,8 @@ $(function() {
     }
     link_url += url_values.join('&');
 
-    var head_html = '<script type="text/javascript" src="'+script_url+'/lib/PachubeLoader.js"></script>';
+    var head_html = '<script type="text/javascript">var PachubeLoaderHome="' + script_url + '"</script>\n'+
+    	'<script type="text/javascript" src="'+script_url+'/lib/PachubeLoader.js"></script>';
     var options = { "timespan": values['timespan'] || '24 hours'
                   , "rolling":  values['rolling'] == 'on'
                   , "update":   values['update'] == 'on'
