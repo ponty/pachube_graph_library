@@ -3,6 +3,9 @@ describe("PachubeGraph", function() {
     , last_hour
     , twenty_four_hours
     , four_days
+    , one_week
+    , two_weeks
+    , one_month
     , three_months
     , options_graph
     , rolling_graph
@@ -16,6 +19,9 @@ describe("PachubeGraph", function() {
                  'fixtures/last_hour.html',
                  'fixtures/twenty_four_hours.html',
                  'fixtures/four_days.html',
+                 'fixtures/one_week.html',
+                 'fixtures/two_weeks.html',
+                 'fixtures/one_month.html',
                  'fixtures/three_months.html',
                  'fixtures/options_graph.html',
                  'fixtures/rolling_graph.html',
@@ -24,6 +30,9 @@ describe("PachubeGraph", function() {
     last_hour = $('#last_hour.pachube-graph');
     twenty_four_hours = $('#twenty_four_hours.pachube-graph');
     four_days = $('#four_days.pachube-graph');
+    one_week = $('#one_week.pachube-graph');
+    two_weeks = $('#two_weeks.pachube-graph');
+    one_month = $('#one_month.pachube-graph');
     three_months = $('#three_months.pachube-graph');
     options_graph = $('#options_graph.pachube-graph');
     rolling_graph = $('#rolling_graph.pachube-graph');
@@ -104,6 +113,18 @@ describe("PachubeGraph", function() {
     four_days.pachubeGraph();
     expect(four_days[0].graph.settings.timespan).toEqual(345600000);
     expect(four_days[0].graph.settings.interval).toEqual(3600);
+
+    one_week.pachubeGraph();
+    expect(one_week[0].graph.settings.timespan).toEqual(7*86400000);
+    expect(one_week[0].graph.settings.interval).toEqual(7*900);
+
+    two_weeks.pachubeGraph();
+    expect(two_weeks[0].graph.settings.timespan).toEqual(14*86400000);
+    expect(two_weeks[0].graph.settings.interval).toEqual(14*900);
+
+    one_month.pachubeGraph();
+    expect(one_month[0].graph.settings.timespan).toEqual(31*86400000);
+    expect(one_month[0].graph.settings.interval).toEqual(31*900);
 
     three_months.pachubeGraph();
     expect(three_months[0].graph.settings.timespan).toEqual(7776000000);

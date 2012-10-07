@@ -18,6 +18,9 @@ Optional settings you can use to set up your graph include:
     timespan: last hour;  Sets a default timespan for the graph.
               24 hours;
               4 days;
+              1 week;
+              2 weeks;
+              1 month;
               3 months;
 
     rolling:  true;       Makes the graph end at the current time,
