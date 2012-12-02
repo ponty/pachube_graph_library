@@ -18,8 +18,8 @@ $(function() {
 
   // use our version of the lib instead of the global version
   //  var script_url = 'http://beta.apps.pachube.com/embeddable_graphs';
-  //  var script_url = '.'; // for local usage
-  var script_url = 'http://ponty.github.com/pachube_graph_library';
+    var script_url = '.'; // for local usage
+  //var script_url = 'http://ponty.github.com/pachube_graph_library';
 
   
   var token = '';
