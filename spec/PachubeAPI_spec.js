@@ -40,7 +40,7 @@ describe("PachubeAPI", function() {
 
     runs(function() {
       expect($.ajax).toHaveBeenCalledWith({
-        url: 'http://api.pachube.com/v2/' + options.resource + '.json?key=' + options.api_key + '&interval=' + options.interval + '&start=' + options.start.toISOString() + '&end=' + options.end.toISOString() + '&per_page=' + options.per_page
+        url: 'http://api.xively.com/v2/' + options.resource + '.json?key=' + options.api_key + '&interval=' + options.interval + '&start=' + options.start.toISOString() + '&end=' + options.end.toISOString() + '&per_page=' + options.per_page
       , success: options.callback
       , dataType: 'jsonp'
       });
@@ -58,7 +58,7 @@ describe("PachubeAPI", function() {
       api = new PachubeAPI();
     });
 
-    it("should call an ajax request to api.pachube.com", function() {
+    it("should call an ajax request to api.xively.com", function() {
       spyOn($, 'ajax');
       var callback = function() {};
       var options = {
@@ -79,7 +79,7 @@ describe("PachubeAPI", function() {
 
       runs(function() {
         expect($.ajax).toHaveBeenCalledWith({
-          url: 'http://api.pachube.com/v2/' + options.resource + '.json?key=' + options.api_key + '&interval=' + options.interval + '&start=' + options.start.toISOString() + '&end=' + options.end.toISOString() + '&per_page=' + options.per_page
+          url: 'http://api.xively.com/v2/' + options.resource + '.json?key=' + options.api_key + '&interval=' + options.interval + '&start=' + options.start.toISOString() + '&end=' + options.end.toISOString() + '&per_page=' + options.per_page
         , success: options.callback
         , dataType: 'jsonp'
         });
@@ -103,7 +103,7 @@ describe("PachubeAPI", function() {
       api.datastreamGet(options);
 
       expect($.ajax).toHaveBeenCalledWith({
-        url: 'http://api.pachube.com/v2/' + options.resource + '.json?key=' + api.settings.api_key + '&interval=' + options.interval + '&start=' + options.start.toISOString() + '&end=' + options.end.toISOString() + '&per_page=' + options.per_page
+        url: 'http://api.xively.com/v2/' + options.resource + '.json?key=' + api.settings.api_key + '&interval=' + options.interval + '&start=' + options.start.toISOString() + '&end=' + options.end.toISOString() + '&per_page=' + options.per_page
       , success: options.callback
       , dataType: 'jsonp'
       });
@@ -119,7 +119,7 @@ describe("PachubeAPI", function() {
       api.datastreamGet(options);
 
       expect($.ajax).toHaveBeenCalledWith({
-        url: 'http://api.pachube.com/v2/' + options.resource + '.json?key=' + api.settings.api_key
+        url: 'http://api.xively.com/v2/' + options.resource + '.json?key=' + api.settings.api_key
       , dataType: 'jsonp'
       });
     });
